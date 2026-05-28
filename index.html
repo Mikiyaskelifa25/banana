@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <title>Sewasew | Premium Banana Fiber Paper Products</title>
+  <meta name="description" content="Based in Arba Minch, Sewasew creates 100% biodegradable, tree-free banana fiber paper products. Custom wholesale bags and packaging with a 200 MOQ.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            forest: {
+              DEFAULT: '#1E3E34',
+              light: '#2C5F4D',
+              dark: '#0F201B',
+              hover: '#23473C',
+            },
+            ochre: {
+              DEFAULT: '#B87C4E',
+              light: '#CF9264',
+              dark: '#8F5931',
+            },
+            parchment: {
+              DEFAULT: '#FDFBF7',
+              dark: '#F2EEE5',
+              card: '#F7F4EC',
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['Playfair Display', 'serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Premium Custom Styling -->
+  <style>
+    html {
+      scrollbar-width: thin;
+      scrollbar-color: var(--color-ochre) var(--color-parchment-dark);
+    }
+    
+    /* Scrollbar customization */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #F2EEE5;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #B87C4E;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #8F5931;
+    }
+
+    /* Glassmorphism panel */
+    .glass-panel {
+      background: rgba(253, 251, 247, 0.75);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(234, 227, 212, 0.5);
+    }
+
+    /* Floating card actions */
+    .premium-card {
+      transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .premium-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 30px rgba(30, 62, 52, 0.08);
+      border-color: rgba(184, 124, 78, 0.3);
+    }
+
+    /* Pulsing play overlay */
+    .glow-btn {
+      position: relative;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+    .glow-btn::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 60%);
+      transform: translate(-50%, -50%) scale(0.5);
+      opacity: 0;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+      pointer-events: none;
+    }
+    .glow-btn:hover::after {
+      transform: translate(-50%, -50%) scale(1.2);
+      opacity: 1;
+    }
+
+    /* Typing indicators and pulse */
+    .typing-dot {
+      animation: typingBounce 1.4s infinite both;
+    }
+    .typing-dot:nth-child(2) { animation-delay: .2s; }
+    .typing-dot:nth-child(3) { animation-delay: .4s; }
+    @keyframes typingBounce {
+      0%, 80%, 100% { transform: translateY(0); }
+      40% { transform: translateY(-6px); }
+    }
+
+    @keyframes softPulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.08); opacity: 0.85; }
+    }
+    .badge-pulse {
+      animation: softPulse 2.5s infinite ease-in-out;
+    }
+
+    /* Custom Seek bars for cinematic video players */
+    .seek-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 9999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+    .seek-slider:hover {
+      height: 6px;
+    }
+    .seek-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #B87C4E;
+      box-shadow: 0 4px 10px rgba(184, 124, 78, 0.5);
+      cursor: pointer;
+      transition: transform 0.2s ease;
+    }
+    .seek-slider::-webkit-slider-thumb:hover {
+      transform: scale(1.3);
+    }
+
+    /* Smooth Fades */
+    .fade-transition {
+      transition: opacity 0.4s ease, transform 0.4s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fade-in {
+      animation: fadeIn 0.5s ease-out forwards;
+    }
+  </style>
+</head>
+<body class="bg-parchment font-sans text-forest-dark antialiased leading-relaxed overflow-x-hidden">
+
+  <!-- Header & Navigation -->
+  <header id="main-header" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500 bg-transparent">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div id="header-container" class="flex items-center justify-between h-20 sm:h-24 transition-all duration-500">
+        <a href="#" class="shrink-0 group">
+          <img src="/logo.png" alt="Sewasew Logo" class="h-16 sm:h-20 w-auto transition-all duration-500 group-hover:scale-105" />
+        </a>
+
+        <!-- Desktop Menu -->
+        <nav class="hidden lg:flex items-center gap-1.5 bg-[#F6F3EB]/40 p-1.5 rounded-2xl border border-[#EAE3D4]/30">
+          <a href="#" class="nav-link px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 text-white bg-forest shadow-md shadow-forest/10" data-section="home">Home</a>
+          <a href="#about" class="nav-link px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 text-forest-dark hover:text-ochre hover:bg-ochre/8" data-section="about">Our Story</a>
+          <a href="#products" class="nav-link px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 text-forest-dark hover:text-ochre hover:bg-ochre/8" data-section="products">Products</a>
+          <a href="#gallery" class="nav-link px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 text-forest-dark hover:text-ochre hover:bg-ochre/8" data-section="gallery">Gallery</a>
+          <a href="#contact" class="nav-link px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 text-forest-dark hover:text-ochre hover:bg-ochre/8" data-section="contact">Impact & Contact</a>
+        </nav>
+
+        <!-- Mobile Menu Toggle Button -->
+        <div class="flex items-center lg:hidden">
+          <button id="mobile-menu-btn" class="w-12 h-12 flex items-center justify-center rounded-xl border text-white border-white/20 bg-white/10 backdrop-blur-sm hover:bg-white/20 transition-all duration-300" aria-label="Toggle navigation menu">
+            <div class="w-5 h-4 relative flex flex-col justify-between">
+              <span class="block h-0.5 w-full bg-current rounded-full transition-all duration-300 origin-center"></span>
+              <span class="block h-0.5 w-full bg-current rounded-full transition-all duration-300"></span>
+              <span class="block h-0.5 w-full bg-current rounded-full transition-all duration-300 origin-center"></span>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-overlay" class="fixed inset-0 bg-[#0F201B]/40 backdrop-blur-md transition-opacity duration-500 lg:hidden opacity-0 pointer-events-none z-40"></div>
+
+    <!-- Mobile Slide-in Drawer -->
+    <div id="mobile-panel" class="fixed top-0 right-0 h-full w-80 bg-parchment shadow-2xl z-50 transform translate-x-full transition-transform duration-500 ease-out lg:hidden border-l border-[#EAE3D4]/50 flex flex-col">
+      <div class="flex items-center justify-between p-6 border-b border-[#EAE3D4]/60">
+        <span class="font-serif font-bold text-forest text-lg tracking-wide">Sewasew Menu</span>
+        <button id="mobile-close-btn" class="w-10 h-10 flex items-center justify-center rounded-xl text-ochre hover:bg-ochre/10 border border-[#EAE3D4] transition-all duration-300" aria-label="Close menu">
+          <i class="fas fa-times text-sm"></i>
+        </button>
+      </div>
+      <nav class="p-6 flex-1 space-y-2 overflow-y-auto">
+        <a href="#" class="mobile-nav-link flex items-center px-5 py-4 rounded-xl text-sm font-semibold tracking-wide transition-all duration-300 text-white bg-ochre shadow-lg shadow-ochre/30" data-section="home">Home</a>
+        <a href="#about" class="mobile-nav-link flex items-center px-5 py-4 rounded-xl text-sm font-semibold tracking-wide transition-all duration-300 text-forest-dark hover:text-white hover:bg-forest hover:shadow-md hover:shadow-forest/20" data-section="about">Our Story</a>
+        <a href="#products" class="mobile-nav-link flex items-center px-5 py-4 rounded-xl text-sm font-semibold tracking-wide transition-all duration-300 text-forest-dark hover:text-white hover:bg-forest hover:shadow-md hover:shadow-forest/20" data-section="products">Products</a>
+        <a href="#gallery" class="mobile-nav-link flex items-center px-5 py-4 rounded-xl text-sm font-semibold tracking-wide transition-all duration-300 text-forest-dark hover:text-white hover:bg-forest hover:shadow-md hover:shadow-forest/20" data-section="gallery">Gallery</a>
+        <a href="#contact" class="mobile-nav-link flex items-center px-5 py-4 rounded-xl text-sm font-semibold tracking-wide transition-all duration-300 text-forest-dark hover:text-white hover:bg-forest hover:shadow-md hover:shadow-forest/20" data-section="contact">Impact & Contact</a>
+      </nav>
+      <div class="p-6 border-t border-[#EAE3D4]/60 bg-[#F6F3EB]/50 text-center">
+        <p class="text-xs text-gray-500 font-medium font-serif">Handcrafted in Arba Minch, Ethiopia</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section id="home" class="relative overflow-hidden pt-32 sm:pt-40 pb-24 md:pb-36 bg-forest-dark min-h-[85vh] flex items-center">
+      <!-- Background Image with Deep Organic Overlays -->
+      <div class="absolute inset-0 bg-cover bg-center bg-no-repeat transition-transform duration-[10000ms] ease-out scale-105" style="background-image: url('/back.png');">
+        <div class="absolute inset-0 bg-gradient-to-r from-forest-dark/75 via-forest-dark/65 to-forest-dark/75"></div>
+        <div class="absolute inset-0 bg-gradient-to-t from-forest-dark via-transparent to-transparent"></div>
+      </div>
+
+      <div class="relative max-w-5xl mx-auto px-6 text-center z-10 w-full">
+        <!-- Organic Pulsing Badge -->
+        <div class="inline-flex items-center gap-2.5 bg-[#F6F3EB]/10 backdrop-blur-md px-5 py-2 rounded-full text-xs font-semibold uppercase tracking-wider text-ochre-light border border-white/10 shadow-lg badge-pulse mb-8">
+          <span class="w-2.5 h-2.5 rounded-full bg-ochre animate-pulse"></span>
+          100% Tree-Free | Handcrafted in Ethiopia
+        </div>
+
+        <!-- Serif Title -->
+        <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl font-semibold tracking-tight leading-[1.1] text-white max-w-4xl mx-auto drop-shadow-xl">
+          Crafted by Nature.<br>
+          <span class="italic text-ochre-light font-normal">Perfected</span> by Hand.
+        </h1>
+
+        <!-- Descriptive Statement -->
+        <p class="text-base sm:text-lg lg:text-xl text-parchment-dark/85 max-w-2xl mx-auto mt-8 leading-relaxed font-light">
+          Transforming agricultural waste into premium, 100% biodegradable banana
+          fiber packaging. Elegant, durable solutions sourced directly from the agricultural paradise of Arba Minch.
+        </p>
+
+        <!-- Grid of 3 Stat Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-12 mt-16 border-t border-white/15 max-w-4xl mx-auto">
+          <div class="bg-[#F6F3EB]/5 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-white/10 shadow-xl transition-all duration-300 hover:bg-[#F6F3EB]/10 hover:border-ochre/30 hover:-translate-y-1">
+            <h3 class="font-serif text-4xl sm:text-5xl font-extrabold text-ochre mb-2">100%</h3>
+            <p class="text-[10px] sm:text-xs font-bold text-white/80 uppercase tracking-widest">Biodegradable</p>
+          </div>
+
+          <div class="bg-[#F6F3EB]/5 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-white/10 shadow-xl transition-all duration-300 hover:bg-[#F6F3EB]/10 hover:border-ochre/30 hover:-translate-y-1">
+            <h3 class="font-serif text-4xl sm:text-5xl font-extrabold text-ochre mb-2">30+</h3>
+            <p class="text-[10px] sm:text-xs font-bold text-white/80 uppercase tracking-widest">Local Jobs Sustained</p>
+          </div>
+
+          <div class="bg-[#F6F3EB]/5 backdrop-blur-md p-6 sm:p-8 rounded-2xl border border-white/10 shadow-xl transition-all duration-300 hover:bg-[#F6F3EB]/10 hover:border-ochre/30 hover:-translate-y-1">
+            <h3 class="font-serif text-4xl sm:text-5xl font-extrabold text-ochre mb-2">200</h3>
+            <p class="text-[10px] sm:text-xs font-bold text-white/80 uppercase tracking-widest">Minimum Order (MOQ)</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 sm:py-32 bg-white scroll-mt-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <!-- Editorial Statement -->
+        <div class="text-center w-full mb-20 max-w-4xl mx-auto">
+          <h2 class="font-serif italic text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-forest-dark leading-tight">
+            Sewasew biodegradable paper and paper products.
+          </h2>
+          <span class="text-ochre font-semibold text-xs tracking-[0.2em] uppercase block my-12 relative">
+            <span class="inline-block px-4 bg-white z-10 relative">Our Roots & Craft</span>
+            <div class="absolute top-1/2 left-0 right-0 h-px bg-[#EAE3D4] -z-0"></div>
+          </span>
+          <h3 class="font-serif text-2xl sm:text-3xl md:text-4xl font-semibold text-forest-dark mt-4">
+            Sustaining Lands, Empowering Communities
+          </h3>
+          <div class="w-20 h-1.5 bg-ochre mx-auto mt-6 rounded-full"></div>
+        </div>
+
+        <!-- Split Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <div class="lg:col-span-7 space-y-8">
+            <h4 class="text-2xl sm:text-3xl font-semibold text-forest font-serif leading-snug">
+              A Circular Story Built in Arba Minch
+            </h4>
+            
+            <p class="text-gray-600 leading-relaxed text-base sm:text-lg font-light">
+              Based in the vibrant agricultural paradise of Arba Minch, Ethiopia, <strong class="font-semibold text-forest-dark">Sewasew</strong> bridges the beautiful gap between historic manual craftsmanship and global environmental stewardship.
+            </p>
+            
+            <p class="text-gray-600 leading-relaxed text-base sm:text-lg font-light">
+              We collect natural banana pseudostem fibers—an abundant agricultural byproduct usually burned or left to waste after harvests—and convert them into extremely tough, versatile, natural packaging sheets and bags.
+            </p>
+            
+            <!-- Styled Quote Panel -->
+            <div class="bg-parchment-card p-8 rounded-3xl border-l-4 border-ochre shadow-[0_10px_30px_rgba(30,62,52,0.02)] transition-transform duration-300 hover:scale-[1.01]">
+              <p class="font-serif italic text-forest text-lg sm:text-xl leading-relaxed">
+                &ldquo;Our name, Sewasew, embodies the perfect connection and ladder of progress between community development, ethical employment, and natural cycles.&rdquo;
+              </p>
+            </div>
+            
+            <p class="text-gray-600 leading-relaxed text-base sm:text-lg font-light">
+              Our chemical-free formulation ensures that our paper returns safely back to the earth, composting completely within a matter of weeks and replenishing local soil ecosystems without microplastics or synthetic toxins.
+            </p>
+          </div>
+
+          <!-- Premium Framed Image -->
+          <div class="lg:col-span-5">
+            <div class="relative rounded-3xl overflow-hidden shadow-2xl bg-parchment-card border border-[#EAE3D4]/80 p-3 premium-card">
+              <img src="/madeyourpaper.png" alt="How Sewasew paper is made" class="w-full h-auto object-cover rounded-2xl shadow-inner" />
+              <div class="absolute inset-0 bg-gradient-to-t from-forest-dark/20 to-transparent pointer-events-none rounded-3xl"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Products Section -->
+    <section id="products" class="py-24 sm:py-32 bg-parchment-card border-y border-[#EAE3D4] scroll-mt-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-ochre font-semibold text-xs tracking-[0.2em] uppercase block mb-3">Our Innovations</span>
+          <h2 class="font-serif text-4xl sm:text-5xl font-semibold text-forest-dark">Made to Disappear</h2>
+          <p class="text-gray-500 mt-4 text-base sm:text-lg font-light max-w-2xl mx-auto">Explore handcrafted products designed to fulfill commercial packaging needs with absolute organic authenticity.</p>
+        </div>
+
+        <!-- Premium Tab Switcher -->
+        <div class="flex justify-center mb-16">
+          <div class="inline-flex p-1.5 rounded-2xl bg-[#EAE3D4]/50 border border-[#EAE3D4]/80 shadow-inner w-full max-w-2xl">
+            <button onclick="changeProductTab('bags')" id="tab-btn-bags" class="product-tab-btn flex-1 py-3 px-4 rounded-xl text-sm font-semibold tracking-wide transition-all duration-300 bg-white text-forest shadow-md">
+              Premium Shopping Bags
+            </button>
+            <button onclick="changeProductTab('packaging')" id="tab-btn-packaging" class="product-tab-btn flex-1 py-3 px-4 rounded-xl text-sm font-semibold tracking-wide transition-all duration-300 text-forest-dark/70 hover:text-forest hover:bg-white/40">
+              Custom Packaging Boxes
+            </button>
+            <button onclick="changeProductTab('stationery')" id="tab-btn-stationery" class="product-tab-btn flex-1 py-3 px-4 rounded-xl text-sm font-semibold tracking-wide transition-all duration-300 text-forest-dark/70 hover:text-forest hover:bg-white/40">
+              Fine Stationery Sheets
+            </button>
+          </div>
+        </div>
+
+        <!-- Tab Content Box -->
+        <div id="product-display-panel" class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center animate-fade-in">
+          <!-- Dynamic Image -->
+          <div class="lg:col-span-5 relative group">
+            <div class="relative w-full aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl bg-white border border-[#EAE3D4]/80 p-2 premium-card">
+              <img id="product-img" src="/gallary/photo_2026-05-21_14-05-35.jpg" alt="Premium Shopping Bags" class="w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105" />
+              <div class="absolute inset-0 bg-gradient-to-t from-forest-dark/20 to-transparent pointer-events-none rounded-3xl"></div>
+            </div>
+            <!-- Eco Badges -->
+            <div id="product-badges-container" class="flex flex-wrap gap-2 mt-6">
+              <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-forest/10 text-forest-dark text-xs font-semibold shadow-sm">
+                <i class="fas fa-leaf text-ochre text-[10px]"></i>
+                100% Home Compostable within 6 to 10 weeks.
+              </span>
+            </div>
+          </div>
+
+          <!-- Product Details -->
+          <div class="lg:col-span-7 space-y-6">
+            <div>
+              <h3 id="product-title" class="font-serif text-3xl sm:text-4xl font-bold text-forest mb-4">Premium Shopping Bags</h3>
+              <p id="product-desc" class="text-gray-600 leading-relaxed text-base sm:text-lg font-light mb-8">
+                Crafted to withstand significant commercial carrying weights. Features comfortable natural twisted handles, reinforced structural bottom folds, and beautiful visible banana fiber aesthetics that clients love feeling.
+              </p>
+              
+              <!-- Specs Grid -->
+              <div id="product-specs-grid" class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="flex items-start gap-4 p-5 rounded-2xl bg-white border border-[#EAE3D4]/50 shadow-sm hover:shadow-md hover:border-ochre/30 transition-all duration-300 group">
+                  <div class="w-10 h-10 rounded-xl bg-ochre/10 flex items-center justify-center shrink-0 group-hover:bg-ochre/20 transition-colors">
+                    <i class="fas fa-bullseye text-ochre text-base"></i>
+                  </div>
+                  <div>
+                    <span class="block text-[10px] font-bold text-forest-dark/80 uppercase tracking-widest mb-1">Ideal for</span>
+                    <span class="text-sm sm:text-base text-gray-600 leading-relaxed">Boutique shops, premium eco-lodges, resorts, and artisanal packaging.</span>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4 p-5 rounded-2xl bg-white border border-[#EAE3D4]/50 shadow-sm hover:shadow-md hover:border-ochre/30 transition-all duration-300 group">
+                  <div class="w-10 h-10 rounded-xl bg-ochre/10 flex items-center justify-center shrink-0 group-hover:bg-ochre/20 transition-colors">
+                    <i class="fas fa-ruler text-ochre text-base"></i>
+                  </div>
+                  <div>
+                    <span class="block text-[10px] font-bold text-forest-dark/80 uppercase tracking-widest mb-1">Standard Dimensions</span>
+                    <span class="text-sm sm:text-base text-gray-600 leading-relaxed">Small, Medium, Large & Customizable custom formats.</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-24 sm:py-32 bg-white scroll-mt-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <span class="text-ochre font-semibold text-xs tracking-[0.2em] uppercase block mb-3">Our Craft</span>
+          <h2 class="font-serif text-4xl sm:text-5xl font-semibold text-forest-dark">Visual Journey</h2>
+          <div class="w-16 h-1 bg-ochre mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- Image Grid -->
+        <div id="gallery-grid-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+          <!-- Dynamically generated or standard list -->
+        </div>
+
+        <!-- Show More Button -->
+        <div class="flex justify-center mt-14">
+          <button id="gallery-toggle-btn" class="glow-btn bg-ochre hover:bg-ochre-dark text-white font-semibold px-10 py-4 rounded-full transition-all duration-300 shadow-lg shadow-ochre/25 hover:shadow-xl hover:shadow-ochre/35 hover:-translate-y-0.5 text-sm sm:text-base flex items-center gap-2">
+            <i class="fas fa-plus text-xs"></i>
+            <span>Explore More Journey</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox fullscreen Modal -->
+    <div id="lightbox-modal" class="fixed inset-0 z-[110] bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
+      <button id="lightbox-close-btn" class="absolute top-6 right-6 text-white/70 hover:text-white text-4xl transition-colors z-10 w-12 h-12 flex items-center justify-center rounded-full bg-white/10 hover:bg-white/20 border border-white/10" aria-label="Close lightbox">&times;</button>
+      <div id="lightbox-content-box" class="max-w-4xl w-full max-h-[85vh] rounded-3xl overflow-hidden shadow-2xl transform scale-95 translate-y-4 transition-all duration-500 bg-black/40 border border-white/10">
+        <div class="relative flex justify-center bg-black/60">
+          <img id="lightbox-image" src="" alt="Lightbox showcase" class="w-auto max-h-[70vh] object-contain" />
+        </div>
+        <div class="bg-parchment p-6 text-center border-t border-[#EAE3D4]">
+          <span class="text-[10px] font-bold text-ochre uppercase tracking-widest block mb-1">Sewasew Ethiopia</span>
+          <h4 id="lightbox-title" class="font-serif text-xl font-bold text-forest-dark">Premium Shopping Bag</h4>
+        </div>
+      </div>
+    </div>
+
+    <!-- Job Stats and Video Section -->
+    <section id="contact" class="py-24 sm:py-32 bg-parchment-card scroll-mt-24">
+      <div class="max-w-7xl mx-auto px-6 lg:px-8">
+        <!-- Header -->
+        <div class="text-center max-w-3xl mx-auto mb-20">
+          <span class="text-ochre font-semibold text-xs tracking-[0.2em] uppercase block mb-3">Our Purpose & Contact</span>
+          <h2 class="font-serif text-4xl sm:text-5xl font-semibold text-forest-dark">Direct Local Impact</h2>
+          <div class="w-16 h-1 bg-ochre mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- Video & Job Stats Grid -->
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+          
+          <!-- Cinematic Video Players Column -->
+          <div class="lg:col-span-6 space-y-8">
+            
+            <!-- Video Player 1 -->
+            <div class="p-1 rounded-[26px] bg-white border border-[#EAE3D4]/60 shadow-lg">
+              <div class="relative group rounded-[22px] overflow-hidden bg-black shadow-xl cursor-pointer transition-transform duration-500 hover:scale-[1.01]" onclick="toggleVideoPlay('vid1', 'play-btn-1')">
+                <div class="relative" style="padding-bottom: 56.25%;">
+                  <video id="vid1" class="absolute inset-0 w-full h-full object-cover" playsinline preload="metadata">
+                    <source src="/video.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div id="play-btn-1" class="absolute inset-0 flex items-center justify-center bg-black/35 transition-all duration-350">
+                  <div class="w-20 h-20 rounded-full bg-white/95 backdrop-blur-md flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 shadow-ochre/10">
+                    <i class="fas fa-play text-2xl text-forest ml-1"></i>
+                  </div>
+                </div>
+                <!-- controls overlay -->
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent px-6 pb-5 pt-20 transition-opacity duration-300 opacity-0 group-hover:opacity-100" onclick="event.stopPropagation()">
+                  <input type="range" min="0" max="100" value="0" id="seek-vid1" class="seek-slider w-full" oninput="seekVideo('vid1', this.value)">
+                  <div class="flex items-center justify-between mt-4">
+                    <div class="flex items-center gap-5">
+                      <button onclick="toggleVideoPlay('vid1', 'play-btn-1')" class="text-white hover:text-ochre-light transition-colors text-lg">
+                        <i class="fas fa-play" id="play-icon-vid1"></i>
+                      </button>
+                      <button onclick="toggleVideoMute('vid1')" class="text-white hover:text-ochre-light transition-colors text-base">
+                        <i class="fas fa-volume-up" id="mute-icon-vid1"></i>
+                      </button>
+                      <span id="time-vid1" class="text-white/80 text-xs sm:text-sm font-medium tracking-wide">0:00 / 0:00</span>
+                    </div>
+                    <button onclick="fullScreenVideo('vid1')" class="text-white hover:text-ochre-light transition-colors text-base"><i class="fas fa-expand"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Video Player 2 -->
+            <div class="p-1 rounded-[26px] bg-white border border-[#EAE3D4]/60 shadow-lg">
+              <div class="relative group rounded-[22px] overflow-hidden bg-black shadow-xl cursor-pointer transition-transform duration-500 hover:scale-[1.01]" onclick="toggleVideoPlay('vid2', 'play-btn-2')">
+                <div class="relative" style="padding-bottom: 56.25%;">
+                  <video id="vid2" class="absolute inset-0 w-full h-full object-cover" playsinline preload="metadata">
+                    <source src="/video1.mp4" type="video/mp4">
+                  </video>
+                </div>
+                <div id="play-btn-2" class="absolute inset-0 flex items-center justify-center bg-black/35 transition-all duration-350">
+                  <div class="w-20 h-20 rounded-full bg-white/95 backdrop-blur-md flex items-center justify-center shadow-2xl transition-all duration-300 hover:scale-110 shadow-ochre/10">
+                    <i class="fas fa-play text-2xl text-forest ml-1"></i>
+                  </div>
+                </div>
+                <!-- controls overlay -->
+                <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/95 via-black/40 to-transparent px-6 pb-5 pt-20 transition-opacity duration-300 opacity-0 group-hover:opacity-100" onclick="event.stopPropagation()">
+                  <input type="range" min="0" max="100" value="0" id="seek-vid2" class="seek-slider w-full" oninput="seekVideo('vid2', this.value)">
+                  <div class="flex items-center justify-between mt-4">
+                    <div class="flex items-center gap-5">
+                      <button onclick="toggleVideoPlay('vid2', 'play-btn-2')" class="text-white hover:text-ochre-light transition-colors text-lg">
+                        <i class="fas fa-play" id="play-icon-vid2"></i>
+                      </button>
+                      <button onclick="toggleVideoMute('vid2')" class="text-white hover:text-ochre-light transition-colors text-base">
+                        <i class="fas fa-volume-up" id="mute-icon-vid2"></i>
+                      </button>
+                      <span id="time-vid2" class="text-white/80 text-xs sm:text-sm font-medium tracking-wide">0:00 / 0:00</span>
+                    </div>
+                    <button onclick="fullScreenVideo('vid2')" class="text-white hover:text-ochre-light transition-colors text-base"><i class="fas fa-expand"></i></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Social Impact Stats Column -->
+          <div class="lg:col-span-6 space-y-8">
+            <!-- Jobs Stats Card -->
+            <div class="bg-white rounded-3xl border border-[#EAE3D4]/60 p-8 sm:p-10 shadow-sm transition-all duration-300 hover:shadow-md">
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-forest-dark mb-2">We Create Jobs That Matter</h3>
+              <div class="w-12 h-1 bg-ochre rounded-full mb-8"></div>
+              
+              <div class="space-y-5 mb-8">
+                <div class="flex items-start gap-4 p-3 rounded-2xl transition-colors hover:bg-parchment/50">
+                  <div class="w-10 h-10 rounded-xl bg-forest/10 flex items-center justify-center shrink-0 mt-0.5 border border-forest/5 bg-forest/5">
+                    <i class="fas fa-users text-forest text-base"></i>
+                  </div>
+                  <div>
+                    <span class="font-bold text-forest text-base sm:text-lg block">5 direct employees</span>
+                    <span class="text-gray-500 text-sm font-light">driving green innovation daily in our Arba Minch workshop</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4 p-3 rounded-2xl transition-colors hover:bg-parchment/50">
+                  <div class="w-10 h-10 rounded-xl bg-ochre/10 flex items-center justify-center shrink-0 mt-0.5 border border-ochre/5 bg-ochre/5">
+                    <i class="fas fa-seedling text-ochre text-base"></i>
+                  </div>
+                  <div>
+                    <span class="font-bold text-forest text-base sm:text-lg block">25 female farmers</span>
+                    <span class="text-gray-500 text-sm font-light">growing and harvesting our raw materials with care</span>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-4 p-3 rounded-2xl transition-colors hover:bg-parchment/50">
+                  <div class="w-10 h-10 rounded-xl bg-forest/10 flex items-center justify-center shrink-0 mt-0.5 border border-forest/5 bg-forest/5">
+                    <i class="fas fa-home text-forest text-base"></i>
+                  </div>
+                  <div>
+                    <span class="font-bold text-forest text-base sm:text-lg block">30 families</span>
+                    <span class="text-gray-500 text-sm font-light">lifted through fair, stable, and empowering work</span>
+                  </div>
+                </div>
+              </div>
+              
+              <p class="font-serif italic text-lg text-forest-dark border-l-4 border-ochre pl-4 py-1.5 bg-parchment/30 rounded-r-xl">
+                Sewasew: Good for the planet. Great for people.
+              </p>
+            </div>
+
+            <!-- Future Goals Card -->
+            <div class="bg-white rounded-3xl border border-[#EAE3D4]/60 p-8 sm:p-10 shadow-sm transition-all duration-300 hover:shadow-md">
+              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-forest-dark mb-2">Looking Ahead: Scaling Jobs, Scaling Impact</h3>
+              <div class="w-12 h-1 bg-ochre rounded-full mb-8"></div>
+              <p class="text-forest font-semibold text-sm tracking-wide uppercase mb-5">By 2027, Sewasew aims to:</p>
+              
+              <ul className="space-y-4" class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded-full bg-ochre/15 flex items-center justify-center shrink-0 mt-0.5 border border-ochre/5 bg-ochre/5">
+                    <i class="fas fa-check text-ochre text-[10px]"></i>
+                  </div>
+                  <span class="text-gray-600 text-sm sm:text-base font-light leading-relaxed">Grow direct employment to 15 team members</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded-full bg-ochre/15 flex items-center justify-center shrink-0 mt-0.5 border border-ochre/5 bg-ochre/5">
+                    <i class="fas fa-check text-ochre text-[10px]"></i>
+                  </div>
+                  <span class="text-gray-600 text-sm sm:text-base font-light leading-relaxed">Expand female farmer network to 100+ women</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded-full bg-ochre/15 flex items-center justify-center shrink-0 mt-0.5 border border-ochre/5 bg-ochre/5">
+                    <i class="fas fa-check text-ochre text-[10px]"></i>
+                  </div>
+                  <span class="text-gray-600 text-sm sm:text-base font-light leading-relaxed">Launch a Young Farmer Training Program for 20 youth annually</span>
+                </li>
+                <li class="flex items-start gap-3">
+                  <div class="w-6 h-6 rounded-full bg-ochre/15 flex items-center justify-center shrink-0 mt-0.5 border border-ochre/5 bg-ochre/5">
+                    <i class="fas fa-check text-ochre text-[10px]"></i>
+                  </div>
+                  <span class="text-gray-600 text-sm sm:text-base font-light leading-relaxed">Introduce profit-sharing dividends for long-term farming partners</span>
+                </li>
+              </ul>
+              
+              <div class="mt-8 pt-6 border-t border-[#EAE3D4]/60">
+                <p class="text-forest-dark font-serif font-medium italic text-base">
+                  We don't just make paper. We build a regenerative economy—one job at a time.
+                </p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Contact Info Cards -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-8 mt-24 max-w-4xl mx-auto">
+          <div class="flex items-start gap-5 p-6 rounded-3xl bg-white border border-[#EAE3D4]/50 shadow-sm hover:shadow-md transition-all duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-ochre/10 flex items-center justify-center text-ochre shrink-0 border border-ochre/5 bg-ochre/5">
+              <i class="fas fa-envelope text-lg"></i>
+            </div>
+            <div class="space-y-1">
+              <h4 class="font-serif font-bold text-forest-dark text-lg">Email Us</h4>
+              <p class="text-gray-500 text-sm font-medium tracking-wide">info@sewasewpaper.com</p>
+              <p class="text-gray-500 text-sm font-medium tracking-wide">orders@sewasewpaper.com</p>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-5 p-6 rounded-3xl bg-white border border-[#EAE3D4]/50 shadow-sm hover:shadow-md transition-all duration-300">
+            <div class="w-12 h-12 rounded-2xl bg-ochre/10 flex items-center justify-center text-ochre shrink-0 border border-ochre/5 bg-ochre/5">
+              <i class="fas fa-map-marker-alt text-lg"></i>
+            </div>
+            <div class="space-y-1">
+              <h4 class="font-serif font-bold text-forest-dark text-lg">Location</h4>
+              <p class="text-gray-500 text-sm font-light">Arba Minch, Ethiopia</p>
+              <p class="text-gray-500 text-sm font-light">Addis Abeba, Ethiopia</p>
+              <p class="text-gray-500 text-xs font-bold text-forest uppercase tracking-widest pt-1">East Africa</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Corporate CTA Banner -->
+    <section class="py-20 bg-forest-dark border-t border-[#EAE3D4]/20 relative overflow-hidden">
+      <div class="absolute -top-24 -left-24 w-96 h-96 rounded-full bg-forest-light/10 blur-3xl"></div>
+      <div class="absolute -bottom-24 -right-24 w-96 h-96 rounded-full bg-ochre/5 blur-3xl"></div>
+
+      <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+        <div class="bg-[#FDFBF7]/5 backdrop-blur-md rounded-[36px] p-10 md:p-16 border border-white/10 shadow-2xl transition-all duration-300 hover:border-white/15">
+          <span class="text-ochre-light font-bold text-xs uppercase tracking-[0.25em] block mb-4">Sustainability Partners</span>
+          <h3 class="font-serif text-3xl md:text-4xl font-semibold text-parchment leading-tight max-w-2xl mx-auto">Ready to Replace Virgin Plastics &amp; Tree-Based Paper?</h3>
+          <p class="text-gray-300 text-sm sm:text-base mt-5 max-w-xl mx-auto font-light leading-relaxed">
+            Join leading eco-boutiques and hotels across Africa and Europe using Sewasew's circular banana fiber packaging.
+          </p>
+          <a href="#contact" class="glow-btn inline-flex items-center justify-center bg-ochre hover:bg-ochre-dark text-white font-semibold px-10 py-4 rounded-full transition-transform duration-300 hover:scale-105 shadow-lg shadow-ochre/20 mt-8 text-sm sm:text-base gap-2">
+            <i class="fas fa-envelope text-xs"></i> Get In Touch / Contact Us
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 sm:py-32 bg-white border-t border-[#EAE3D4]/60 scroll-mt-24">
+      <div class="max-w-4xl mx-auto px-6 lg:px-8">
+        
+        <!-- Header -->
+        <div class="text-center max-w-2xl mx-auto mb-16">
+          <span class="text-ochre font-semibold text-xs tracking-[0.2em] uppercase block mb-3">Got Questions?</span>
+          <h2 class="font-serif text-4xl sm:text-5xl font-semibold text-forest-dark">Frequently Asked Questions</h2>
+          <div class="w-16 h-1 bg-ochre mx-auto mt-4 rounded-full"></div>
+        </div>
+
+        <!-- Accordions -->
+        <div class="space-y-5 max-w-3xl mx-auto">
+          <!-- Item 1 -->
+          <div class="bg-parchment-card rounded-2xl border border-[#EAE3D4]/50 overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md hover:border-ochre/25">
+            <button onclick="toggleAccordion(1)" class="w-full flex justify-between items-center p-6 text-left font-semibold text-forest-dark transition-colors hover:bg-parchment-dark/30 text-base sm:text-lg cursor-pointer">
+              <span>How long does the paper take to compost naturally?</span>
+              <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center border border-[#EAE3D4] text-ochre shrink-0 shadow-sm transition-transform duration-300">
+                <i id="accordion-icon-1" class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
+              </div>
+            </button>
+            <div id="accordion-content-1" class="transition-all duration-500 ease-in-out overflow-hidden max-h-0 opacity-0">
+              <p class="p-6 text-gray-500 text-sm sm:text-base leading-relaxed font-light bg-white/40">
+                Because Sewasew paper products are strictly 100% natural banana fiber and avoid synthetic chemical lamination or plastic finishes, they break down naturally in standard home composting arrays in just 6 to 12 weeks. They will safely decompose in any regular garden or open soil framework, adding vital organic nutrients.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="bg-parchment-card rounded-2xl border border-[#EAE3D4]/50 overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md hover:border-ochre/25">
+            <button onclick="toggleAccordion(2)" class="w-full flex justify-between items-center p-6 text-left font-semibold text-forest-dark transition-colors hover:bg-parchment-dark/30 text-base sm:text-lg cursor-pointer">
+              <span>Why is banana fiber naturally stronger than wood pulp?</span>
+              <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center border border-[#EAE3D4] text-ochre shrink-0 shadow-sm transition-transform duration-300">
+                <i id="accordion-icon-2" class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
+              </div>
+            </button>
+            <div id="accordion-content-2" class="transition-all duration-500 ease-in-out overflow-hidden max-h-0 opacity-0">
+              <p class="p-6 text-gray-500 text-sm sm:text-base leading-relaxed font-light bg-white/40">
+                Banana pseudostem fiber fibers are among the strongest natural fibers in the world, with incredible cellular tensile strength. In contrast to wood pulp, which requires massive chemical intervention and mechanical shearing that shortens fibers, our manual extraction preserves the long, durable strands, translating into premium structural capability.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="bg-parchment-card rounded-2xl border border-[#EAE3D4]/50 overflow-hidden shadow-sm transition-all duration-300 hover:shadow-md hover:border-ochre/25">
+            <button onclick="toggleAccordion(3)" class="w-full flex justify-between items-center p-6 text-left font-semibold text-forest-dark transition-colors hover:bg-parchment-dark/30 text-base sm:text-lg cursor-pointer">
+              <span>What options exist for custom logo branding and printing?</span>
+              <div class="w-8 h-8 rounded-full bg-white flex items-center justify-center border border-[#EAE3D4] text-ochre shrink-0 shadow-sm transition-transform duration-300">
+                <i id="accordion-icon-3" class="fas fa-chevron-down text-xs transition-transform duration-300"></i>
+              </div>
+            </button>
+            <div id="accordion-content-3" class="transition-all duration-500 ease-in-out overflow-hidden max-h-0 opacity-0">
+              <p class="p-6 text-gray-500 text-sm sm:text-base leading-relaxed font-light bg-white/40">
+                We offer customizable eco-conscious print branding services. We utilize organic, soy-based, and botanical water inks to ensure your company logo is displayed cleanly while strictly maintaining our plastic-free, circular composting values.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-parchment-card border-t border-[#EAE3D4] py-20 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 lg:px-8">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-16">
+        
+        <!-- Logo Column -->
+        <div class="space-y-6">
+          <img src="/logo.png" alt="Sewasew" class="h-28 w-auto mb-2 drop-shadow-sm transition-transform duration-300 hover:scale-102 animate-pulse" />
+          <p class="text-sm text-gray-500 leading-relaxed font-light">
+            Turning agricultural waste into premium, 100% biodegradable banana fiber packaging. Handcrafted with pride in Ethiopia.
+          </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="font-serif font-bold text-forest-dark text-base tracking-wide mb-6 relative">
+            Quick Links
+            <span class="absolute bottom-0 left-0 w-8 h-0.5 bg-ochre translate-y-2 rounded-full"></span>
+          </h4>
+          <ul class="space-y-3.5 text-sm font-light">
+            {["Home", "Our Story", "Products", "Gallery"].map((label) => (
+              <li>
+                <a href={label === "Home" ? "#" : `#${label.toLowerCase().replace(/\s+/g, "-")}`} class="text-gray-500 hover:text-ochre transition-colors duration-300 flex items-center gap-1.5 group">
+                  <i class="fas fa-chevron-right text-[8px] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"></i>
+                  {label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <!-- Products List -->
+        <div>
+          <h4 class="font-serif font-bold text-forest-dark text-base tracking-wide mb-6 relative">
+            Products
+            <span class="absolute bottom-0 left-0 w-8 h-0.5 bg-ochre translate-y-2 rounded-full"></span>
+          </h4>
+          <ul class="space-y-3.5 text-sm font-light">
+            <li>
+              <a href="#products" class="text-gray-500 hover:text-ochre transition-colors duration-300 flex items-center gap-1.5 group">
+                <i class="fas fa-chevron-right text-[8px] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"></i>
+                Shopping Bags
+              </a>
+            </li>
+            <li>
+              <a href="#products" class="text-gray-500 hover:text-ochre transition-colors duration-300 flex items-center gap-1.5 group">
+                <i class="fas fa-chevron-right text-[8px] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"></i>
+                Custom Boxes
+              </a>
+            </li>
+            <li>
+              <a href="#products" class="text-gray-500 hover:text-ochre transition-colors duration-300 flex items-center gap-1.5 group">
+                <i class="fas fa-chevron-right text-[8px] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300"></i>
+                Fine Stationery
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact details -->
+        <div>
+          <h4 class="font-serif font-bold text-forest-dark text-base tracking-wide mb-6 relative">
+            Contact Hub
+            <span class="absolute bottom-0 left-0 w-8 h-0.5 bg-ochre translate-y-2 rounded-full"></span>
+          </h4>
+          <div class="space-y-4 text-sm text-gray-500 leading-relaxed font-light">
+            <div class="flex items-start gap-2.5">
+              <i class="fas fa-envelope text-ochre mt-1"></i>
+              <div class="break-all">
+                <p>sewasewbiodegradable@gmail.com</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <i class="fas fa-phone text-ochre mt-1"></i>
+              <div>
+                <p>+251 984 711 844</p>
+                <p>+251 911 603 027</p>
+              </div>
+            </div>
+            <div class="flex items-start gap-2.5">
+              <i class="fas fa-map-marker-alt text-ochre mt-1"></i>
+              <p>Arba Minch, Ethiopia</p>
+            </div>
+          </div>
+
+          <!-- Social grids -->
+          <div class="flex gap-3.5 mt-6">
+            <a href="#" class="w-10 h-10 rounded-xl bg-white border border-[#EAE3D4] flex items-center justify-center text-forest-light hover:text-white hover:bg-ochre hover:border-ochre hover:shadow-md hover:-translate-y-0.5 transition-all duration-300" aria-label="instagram"><i class="fab fa-instagram text-base"></i></a>
+            <a href="#" class="w-10 h-10 rounded-xl bg-white border border-[#EAE3D4] flex items-center justify-center text-forest-light hover:text-white hover:bg-ochre hover:border-ochre hover:shadow-md hover:-translate-y-0.5 transition-all duration-300" aria-label="linkedin"><i class="fab fa-linkedin text-base"></i></a>
+            <a href="#" class="w-10 h-10 rounded-xl bg-white border border-[#EAE3D4] flex items-center justify-center text-forest-light hover:text-white hover:bg-ochre hover:border-ochre hover:shadow-md hover:-translate-y-0.5 transition-all duration-300" aria-label="whatsapp"><i class="fab fa-whatsapp text-base"></i></a>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-[#E2D9CA]/75 pt-10 mt-16 text-center text-xs text-gray-400 font-light">
+        <p class="font-serif leading-loose">
+          &copy; <span id="current-year"></span> Sewasew Biodegradable Paper Products. Handcrafted with pride in Ethiopia — returning to the earth, naturally.
+        </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Script Modules -->
+  <script>
+    // Product data Engine holding complete text lists
+    const productData = {
+      bags: {
+        title: "Premium Shopping Bags",
+        description: "Crafted to withstand significant commercial carrying weights. Features comfortable natural twisted handles, reinforced structural bottom folds, and beautiful visible banana fiber aesthetics that clients love feeling.",
+        image: "/gallary/photo_2026-05-21_14-05-35.jpg",
+        bullets: [
+          { label: "Ideal for", value: "Boutique shops, premium eco-lodges, resorts, and artisanal packaging." },
+          { label: "Standard Dimensions", value: "Small, Medium, Large & Customizable custom formats." }
+        ],
+        badge: "100% Home Compostable within 6 to 10 weeks."
+      },
+      packaging: {
+        title: "Custom Packaging Boxes",
+        description: "Elegant, structural natural packaging boxes built directly to protect delicate boutique products, high-end organic cosmetics, premium jewelry collections, and corporate gifting arrays.",
+        image: "/gallary/photo_2026-05-21_14-05-39.jpg",
+        bullets: [
+          { label: "Ideal for", value: "Retail packaging, eco-conscious subscription boxes, and cosmetic jars." },
+          { label: "Tailoring", value: "Custom folding tabs, internal product partitions, and clean structural fits." }
+        ],
+        badge: "100% Tree-Free, easily shredded for immediate soil compost."
+      },
+      stationery: {
+        title: "Fine Stationery Sheets",
+        description: "Gorgeous, heavily textured loose sheets designed specifically for culinary menu card setups, organic corporate folders, calligraphic art prints, and hand-bound journals of fine distinction.",
+        image: "/gallary/photo_2026-05-21_14-05-38.jpg",
+        bullets: [
+          { label: "Ideal for", value: "High-end restaurants, eco-guesthouse menus, journaling, and letterpress." },
+          { label: "Weights", value: "Available in rich standard heavy card stocks to delicate light writing weights." },
+          { label: "Artisan Quality", value: "Beautifully deckled natural edges options available." }
+        ],
+        badge: "Beautifully deckled natural edges options available."
+      }
+    };
+
+    // Feature Icon mapping
+    const featureIcons = {
+      "Ideal for": "fa-bullseye",
+      "Standard Dimensions": "fa-ruler",
+      "Tailoring": "fa-cut",
+      "Weights": "fa-weight",
+      "Artisan Quality": "fa-gem"
+    };
+
+    // Complete list of gallery items (20 total)
+    const galleryImages = [
+      { src: "/gallary/photo_2026-05-21_14-05-35.jpg", title: "Premium Shopping Bag" },
+      { src: "/gallary/photo_2026-05-21_14-05-36 (2).jpg", title: "Harvesting Fiber" },
+      { src: "/gallary/photo_2026-05-21_14-05-36.jpg", title: "Artisans at Work" },
+      { src: "/gallary/photo_2026-05-21_14-05-38 (2).jpg", title: "Natural Dyeing" },
+      { src: "/gallary/photo_2026-05-21_14-05-38 (3).jpg", title: "Arba Minch, Ethiopia" },
+      { src: "/gallary/photo_2026-05-21_14-05-38.jpg", title: "Banana Fiber Sheets" },
+      { src: "/gallary/photo_2026-05-21_14-05-39 (2).jpg", title: "Handcrafted Process" },
+      { src: "/gallary/photo_2026-05-21_14-05-39.jpg", title: "Eco-Friendly Packaging" },
+      { src: "/gallary/photo_2026-05-21_14-05-40 (2).jpg", title: "Product Showcase" },
+      { src: "/gallary/photo_2026-05-21_14-05-40 (3).jpg", title: "Fiber Preparation" },
+      { src: "/gallary/photo_2026-05-21_14-05-40.jpg", title: "Community Impact" },
+      { src: "/gallary/photo_2026-05-21_14-05-41.jpg", title: "Quality Control" },
+      { src: "/gallary/photo_2026-05-21_14-05-42.jpg", title: "Our Workshop" },
+      { src: "/gallary/photo_2026-05-21_14-05-44 (2).jpg", title: "Sustainable Materials" },
+      { src: "/gallary/photo_2026-05-21_14-05-44.jpg", title: "Design Process" },
+      { src: "/gallary/photo_2026-05-21_14-05-45 (2).jpg", title: "Our Team" },
+      { src: "/gallary/photo_2026-05-21_14-05-45 (3).jpg", title: "Raw Materials" },
+      { src: "/gallary/photo_2026-05-21_14-05-45 (4).jpg", title: "Finishing Touches" },
+      { src: "/gallary/photo_2026-05-21_14-05-45.jpg", title: "Our Products" },
+      { src: "/gallary/photo_2026-05-21_14-05-46.jpg", title: "Final Product" }
+    ];
+
+    // State Variables
+    let galleryExpanded = false;
+
+    // Set Copyright Year
+    document.getElementById('current-year').innerText = new Date().getFullYear();
+
+    // Scroll Handler for sticky Header
+    const mainHeader = document.getElementById('main-header');
+    const headerContainer = document.getElementById('header-container');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 20) {
+        mainHeader.classList.remove('bg-transparent');
+        mainHeader.classList.add('bg-white/80', 'backdrop-blur-xl', 'border-b', 'border-[#EAE3D4]/50', 'shadow-[0_4px_30px_rgba(30,62,52,0.03)]');
+        headerContainer.classList.remove('h-20', 'sm:h-24');
+        headerContainer.classList.add('h-16', 'sm:h-20');
+        mobileMenuBtn.classList.remove('text-white', 'border-white/20', 'bg-white/10', 'hover:bg-white/20');
+        mobileMenuBtn.classList.add('text-forest', 'border-[#EAE3D4]', 'bg-white', 'hover:bg-parchment-card');
+      } else {
+        mainHeader.classList.remove('bg-white/80', 'backdrop-blur-xl', 'border-b', 'border-[#EAE3D4]/50', 'shadow-[0_4px_30px_rgba(30,62,52,0.03)]');
+        mainHeader.classList.add('bg-transparent');
+        headerContainer.classList.remove('h-16', 'sm:h-20');
+        headerContainer.classList.add('h-20', 'sm:h-24');
+        mobileMenuBtn.classList.remove('text-forest', 'border-[#EAE3D4]', 'bg-white', 'hover:bg-parchment-card');
+        mobileMenuBtn.classList.add('text-white', 'border-white/20', 'bg-white/10', 'hover:bg-white/20');
+      }
+    });
+
+    // Scroll Active Section Spy observer
+    const observerOptions = {
+      root: null,
+      rootMargin: '-30% 0px -60% 0px',
+      threshold: 0
+    };
+    
+    const sections = ['home', 'about', 'products', 'gallery', 'contact'];
+    const navLinks = document.querySelectorAll('.nav-link');
+    const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id;
+          
+          navLinks.forEach(link => {
+            if (link.getAttribute('data-section') === sectionId) {
+              link.className = 'nav-link px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 text-white bg-forest shadow-md shadow-forest/10';
+            } else {
+              link.className = 'nav-link px-4 py-2 rounded-xl text-xs sm:text-sm font-semibold tracking-wide transition-all duration-300 text-forest-dark hover:text-ochre hover:bg-ochre/8';
+            }
+          });
+
+          mobileNavLinks.forEach(link => {
+            if (link.getAttribute('data-section') === sectionId) {
+              link.className = 'mobile-nav-link flex items-center px-5 py-4 rounded-xl text-sm font-semibold tracking-wide transition-all duration-300 text-white bg-ochre shadow-lg shadow-ochre/30';
+            } else {
+              link.className = 'mobile-nav-link flex items-center px-5 py-4 rounded-xl text-sm font-semibold tracking-wide transition-all duration-300 text-forest-dark hover:text-white hover:bg-forest hover:shadow-md hover:shadow-forest/20';
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    sections.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) observer.observe(el);
+    });
+
+    // Mobile Panel Drawer interactions
+    const mobileOverlay = document.getElementById('mobile-overlay');
+    const mobilePanel = document.getElementById('mobile-panel');
+    const mobileCloseBtn = document.getElementById('mobile-close-btn');
+
+    function toggleMobileMenu(open) {
+      if (open) {
+        mobileOverlay.classList.remove('opacity-0', 'pointer-events-none');
+        mobileOverlay.classList.add('opacity-100', 'pointer-events-auto');
+        mobilePanel.classList.remove('translate-x-full');
+        mobilePanel.classList.add('translate-x-0');
+      } else {
+        mobileOverlay.classList.remove('opacity-100', 'pointer-events-auto');
+        mobileOverlay.classList.add('opacity-0', 'pointer-events-none');
+        mobilePanel.classList.remove('translate-x-0');
+        mobilePanel.classList.add('translate-x-full');
+      }
+    }
+
+    mobileMenuBtn.addEventListener('click', () => toggleMobileMenu(true));
+    mobileCloseBtn.addEventListener('click', () => toggleMobileMenu(false));
+    mobileOverlay.addEventListener('click', () => toggleMobileMenu(false));
+    mobileNavLinks.forEach(l => l.addEventListener('click', () => toggleMobileMenu(false)));
+
+    // Product Tab Switching Logic
+    function changeProductTab(tabKey) {
+      const info = productData[tabKey];
+      if (!info) return;
+
+      // Update button visual styles
+      document.querySelectorAll('.product-tab-btn').forEach(btn => {
+        if (btn.id === `tab-btn-${tabKey}`) {
+          btn.className = 'product-tab-btn flex-1 py-3 px-4 rounded-xl text-sm font-semibold tracking-wide transition-all duration-300 bg-white text-forest shadow-md';
+        } else {
+          btn.className = 'product-tab-btn flex-1 py-3 px-4 rounded-xl text-sm font-semibold tracking-wide transition-all duration-300 text-forest-dark/70 hover:text-forest hover:bg-white/40';
+        }
+      });
+
+      // Update Content Panel with soft fade
+      const displayPanel = document.getElementById('product-display-panel');
+      displayPanel.style.opacity = '0';
+      displayPanel.style.transform = 'translateY(4px)';
+
+      setTimeout(() => {
+        document.getElementById('product-img').src = info.image;
+        document.getElementById('product-title').innerText = info.title;
+        document.getElementById('product-desc').innerText = info.description;
+
+        // Render eco badges
+        const badgesContainer = document.getElementById('product-badges-container');
+        badgesContainer.innerHTML = `
+          <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-forest/10 text-forest-dark text-xs font-semibold shadow-sm">
+            <i class="fas fa-leaf text-ochre text-[10px]"></i>
+            ${info.badge}
+          </span>
+        `;
+
+        // Render specs grid
+        const specsGrid = document.getElementById('product-specs-grid');
+        specsGrid.innerHTML = info.bullets.map(bullet => {
+          const icon = featureIcons[bullet.label] || 'fa-check';
+          return `
+            <div class="flex items-start gap-4 p-5 rounded-2xl bg-white border border-[#EAE3D4]/50 shadow-sm hover:shadow-md hover:border-ochre/30 transition-all duration-300 group">
+              <div class="w-10 h-10 rounded-xl bg-ochre/10 flex items-center justify-center shrink-0 group-hover:bg-ochre/20 transition-colors">
+                <i class="fas ${icon} text-ochre text-base"></i>
+              </div>
+              <div>
+                <span class="block text-[10px] font-bold text-forest-dark/80 uppercase tracking-widest mb-1">${bullet.label}</span>
+                <span class="text-sm sm:text-base text-gray-600 leading-relaxed">${bullet.value}</span>
+              </div>
+            </div>
+          `;
+        }).join('');
+
+        displayPanel.style.opacity = '1';
+        displayPanel.style.transform = 'translateY(0)';
+      }, 250);
+    }
+
+    // Photo-Journalist Gallery Generator
+    const galleryGrid = document.getElementById('gallery-grid-container');
+    const galleryToggleBtn = document.getElementById('gallery-toggle-btn');
+
+    function renderGallery() {
+      const count = galleryExpanded ? galleryImages.length : 6;
+      galleryGrid.innerHTML = galleryImages.slice(0, count).map((item, i) => `
+        <div onclick="openLightbox('${item.src}', '${item.title}')" class="group relative overflow-hidden rounded-3xl bg-parchment-card border border-[#EAE3D4]/50 cursor-pointer shadow-sm hover:shadow-xl transition-all duration-500 hover:-translate-y-1 animate-fade-in" style="animation-delay: ${i * 40}ms">
+          <div class="overflow-hidden aspect-[4/3] w-full">
+            <img src="${item.src}" alt="${item.title}" class="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-110" loading="lazy" />
+          </div>
+          <div class="absolute inset-0 bg-gradient-to-t from-forest-dark/85 via-forest-dark/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+            <div class="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 w-full">
+              <span class="text-[10px] font-bold text-ochre-light uppercase tracking-widest block mb-1">Sewasew Craft</span>
+              <h4 class="text-white font-serif text-lg sm:text-xl font-medium tracking-wide">${item.title}</h4>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      galleryToggleBtn.querySelector('span').innerText = galleryExpanded ? 'Show Less' : 'Explore More Journey';
+      galleryToggleBtn.querySelector('i').className = galleryExpanded ? 'fas fa-minus text-xs' : 'fas fa-plus text-xs';
+    }
+
+    galleryToggleBtn.addEventListener('click', () => {
+      galleryExpanded = !galleryExpanded;
+      renderGallery();
+      if (!galleryExpanded) {
+        document.getElementById('gallery').scrollIntoView({ behavior: 'smooth' });
+      }
+    });
+
+    // Initialize gallery on load
+    renderGallery();
+
+    // Immersive Fullscreen Lightbox Modal logic
+    const lightboxModal = document.getElementById('lightbox-modal');
+    const lightboxImg = document.getElementById('lightbox-image');
+    const lightboxTitle = document.getElementById('lightbox-title');
+    const lightboxContentBox = document.getElementById('lightbox-content-box');
+    const lightboxCloseBtn = document.getElementById('lightbox-close-btn');
+
+    function openLightbox(src, title) {
+      lightboxImg.src = src;
+      lightboxTitle.innerText = title;
+      
+      lightboxModal.classList.remove('opacity-0', 'pointer-events-none');
+      lightboxModal.classList.add('opacity-100');
+      lightboxContentBox.classList.remove('scale-95', 'translate-y-4');
+      lightboxContentBox.classList.add('scale-100', 'translate-y-0');
+    }
+
+    function closeLightbox() {
+      lightboxContentBox.classList.remove('scale-100', 'translate-y-0');
+      lightboxContentBox.classList.add('scale-95', 'translate-y-4');
+      lightboxModal.classList.remove('opacity-100');
+      lightboxModal.classList.add('opacity-0', 'pointer-events-none');
+    }
+
+    lightboxCloseBtn.addEventListener('click', closeLightbox);
+    lightboxModal.addEventListener('click', closeLightbox);
+    lightboxContentBox.addEventListener('click', (e) => e.stopPropagation());
+
+    // Cinematic custom VideoPlayer Controls logic
+    const videos = {
+      vid1: { playing: false, muted: false },
+      vid2: { playing: false, muted: false }
+    };
+
+    function toggleVideoPlay(id, playBtnOverlayId) {
+      const vid = document.getElementById(id);
+      const overlay = document.getElementById(playBtnOverlayId);
+      const playIcon = document.getElementById(`play-icon-${id}`);
+      
+      if (!vid) return;
+
+      // Update timestamp duration initially
+      vid.addEventListener('timeupdate', () => {
+        const current = formatVideoTime(vid.currentTime);
+        const duration = formatVideoTime(vid.duration || 0);
+        document.getElementById(`time-${id}`).innerText = `${current} / ${duration}`;
+        
+        // update seek range
+        const progress = (vid.currentTime / (vid.duration || 1)) * 100;
+        document.getElementById(`seek-${id}`).value = progress;
+      });
+
+      if (vid.paused) {
+        vid.play();
+        videos[id].playing = true;
+        overlay.classList.add('opacity-0', 'pointer-events-none');
+        playIcon.className = 'fas fa-pause';
+      } else {
+        vid.pause();
+        videos[id].playing = false;
+        overlay.classList.remove('opacity-0', 'pointer-events-none');
+        playIcon.className = 'fas fa-play';
+      }
+    }
+
+    function toggleVideoMute(id) {
+      const vid = document.getElementById(id);
+      const muteIcon = document.getElementById(`mute-icon-${id}`);
+      if (!vid) return;
+
+      vid.muted = !vid.muted;
+      videos[id].muted = vid.muted;
+      muteIcon.className = vid.muted ? 'fas fa-volume-mute' : 'fas fa-volume-up';
+    }
+
+    function seekVideo(id, percentage) {
+      const vid = document.getElementById(id);
+      if (!vid || !vid.duration) return;
+
+      const time = (percentage / 100) * vid.duration;
+      vid.currentTime = time;
+    }
+
+    function fullScreenVideo(id) {
+      const vid = document.getElementById(id);
+      if (!vid) return;
+
+      if (vid.requestFullscreen) {
+        vid.requestFullscreen();
+      } else if (vid.webkitRequestFullscreen) {
+        vid.webkitRequestFullscreen();
+      } else if (vid.msRequestFullscreen) {
+        vid.msRequestFullscreen();
+      }
+    }
+
+    function formatVideoTime(seconds) {
+      const m = Math.floor(seconds / 60);
+      const s = Math.floor(seconds % 60);
+      return `${m}:${s.toString().padStart(2, "0")}`;
+    }
+
+    // FAQ Accordion Toggle Interaction
+    function toggleAccordion(index) {
+      const content = document.getElementById(`accordion-content-${index}`);
+      const icon = document.getElementById(`accordion-icon-${index}`);
+      
+      const isOpen = !content.classList.contains('max-h-0');
+
+      // Close all accordions first
+      for (let i = 1; i <= 3; i++) {
+        const c = document.getElementById(`accordion-content-${i}`);
+        const ic = document.getElementById(`accordion-icon-${i}`);
+        if (c) {
+          c.classList.add('max-h-0', 'opacity-0');
+          c.classList.remove('max-h-96', 'opacity-100', 'border-t', 'border-[#EAE3D4]/30');
+          if (ic) ic.classList.remove('rotate-180', 'text-och-dark');
+        }
+      }
+
+      if (!isOpen) {
+        content.classList.remove('max-h-0', 'opacity-0');
+        content.classList.add('max-h-96', 'opacity-100', 'border-t', 'border-[#EAE3D4]/30');
+        icon.classList.add('rotate-180', 'text-ochre-dark');
+      }
+    }
+  </script>
+</body>
+</html>
